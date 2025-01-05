@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
@@ -50,11 +51,19 @@
             label = "TO_LAYER_0";
         };
 
-        pass: pass {
+        hint: pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(E) &kp C &kp L &kp I &kp P &kp S &kp E &kp MINUS &kp NUMBER_0 &kp NUMBER_8 &kp NUMBER_2 &kp NUMBER_3>;
             label = "PASS";
+        };
+
+        altclick: altclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_ALT &mkp LCLK>, <&macro_press>;
+
+            label = "ALTCLICK";
         };
     };
 
@@ -76,8 +85,8 @@
             bindings = <
 &kp Q      &kp W         &kp E         &kp R  &kp T                                                                          &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D         &kp F  &kp G                 &kp LEFT_SHIFT                            &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z      &kp X         &kp C         &kp V  &kp B                 &kp COLON                                 &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &sl 2  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 3 LANG_ZENKAKUHANKAKU      &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
+&kp Z      &kp X         &kp C         &kp V  &kp B                 &kp INTERNATIONAL_5                       &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &sl 2  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 1 LANG_ZENKAKUHANKAKU      &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -85,10 +94,10 @@
 
         FUNCTION {
             bindings = <
-&pass   &trans  &trans  &trans  &trans                      &trans  &kp F7  &kp F8  &kp F9  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp ESCAPE
+&hint   &trans  &trans  &trans  &trans                         &trans  &kp F7  &kp F8  &kp F9  &kp F12
+&trans  &trans  &trans  &trans  &altclick  &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &trans  &trans  &trans  &trans     &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
+&trans  &trans  &trans  &trans  &trans     &trans      &trans  &trans                          &kp ESCAPE
             >;
         };
 
