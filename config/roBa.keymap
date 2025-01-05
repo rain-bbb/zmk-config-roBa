@@ -67,10 +67,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R  &kp T                                                                   &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F  &kp G                 &kp LEFT_SHIFT                     &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z      &kp X         &kp C         &kp V  &kp B                 &kp COLON                          &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &sl 2  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
+&kp Q      &kp W         &kp E         &kp R  &kp T                                                                      &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F  &kp G                 &kp LEFT_SHIFT                        &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
+&kp Z      &kp X         &kp C         &kp V  &kp B                 &kp COLON                             &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &sl 2  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 3 INTERNATIONAL_2      &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -87,19 +87,19 @@
 
         NUM {
             bindings = <
-&kp UNDERSCORE  &kp KP_NUMBER_7  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mkp MCLK                                    &kp TAB          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
-&kp MINUS       &kp EQUAL        &sl 5                 &mkp LCLK              &mkp RCLK  &kp LEFT_ALT      &kp UNDERSCORE  &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON
-&kp KP_PLUS     &kp KP_ASTERISK  &kp AT_SIGN           &kp LC(V)              &kp LC(C)  &kp EQUAL         &trans          &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
-&trans          &trans           &trans                &trans                 &trans     &trans            &trans          &trans                                                              &kp KP_NUMLOCK
+&kp EXCL     &kp KP_NUMBER_7  &kp ASTERISK      &kp LEFT_PARENTHESIS  &mkp MCLK                                    &kp TAB          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
+&kp MINUS    &kp UNDERSCORE   &sl 5             &mkp LCLK             &mkp RCLK  &kp LEFT_ALT      &kp UNDERSCORE  &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SINGLE_QUOTE
+&kp KP_PLUS  &kp KP_ASTERISK  &kp LEFT_BRACKET  &kp LC(V)             &kp LC(C)  &kp EQUAL         &trans          &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
+&trans       &trans           &trans            &trans                &trans     &trans            &trans          &trans                                                              &kp KP_NUMLOCK
             >;
         };
 
         ARROW {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT                        &trans          &trans          &trans           &trans  &trans
-&kp AMPERSAND    &kp SINGLE_QUOTE   &kp EXCLAMATION   &kp QUESTION       &kp BACKSLASH  &trans      &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
-&kp HASH         &kp PERCENT        &kp TILDE         &kp BACKSLASH      &kp PIPE       &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &kp UNDERSCORE
-&trans           &trans             &trans            &trans             &trans         &trans      &trans  &trans                                                   &trans
+&kp EXCLAMATION  &kp AT_SIGN       &kp RIGHT_BRACKET  &kp BACKSLASH  &kp PERCENT                      &trans          &trans          &trans           &trans  &trans
+&kp CARET        &kp SINGLE_QUOTE  &kp EXCLAMATION    &kp QUESTION   &kp INT_YEN  &trans      &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
+&kp HASH         &kp PERCENT       &kp PLUS           &kp INT_YEN    &kp PIPE     &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &kp UNDERSCORE
+&trans           &trans            &trans             &trans         &trans       &trans      &trans  &trans                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
