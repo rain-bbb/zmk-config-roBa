@@ -96,14 +96,14 @@
             bindings = <
 &hint   &trans  &trans  &trans  &trans                         &trans  &kp F7  &kp F8  &kp F9  &kp F12
 &trans  &trans  &trans  &trans  &altclick  &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans  &trans  &trans  &trans     &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
+&trans  &trans  &trans  &trans  &trans     &sl 6       &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
 &trans  &trans  &trans  &trans  &trans     &trans      &trans  &trans                          &kp ESCAPE
             >;
         };
 
         NUM {
             bindings = <
-&kp LS(INTERNATIONAL_1)  &kp KP_NUMBER_7  &kp ASTERISK      &kp LEFT_PARENTHESIS  &mkp MCLK                                    &kp TAB          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
+&kp LS(INTERNATIONAL_1)  &kp LEFT_ALT     &kp ASTERISK      &kp LEFT_PARENTHESIS  &mkp MCLK                                    &kp TAB          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
 &kp MINUS                &kp UNDERSCORE   &sl 5             &mkp LCLK             &mkp RCLK  &kp LEFT_ALT      &kp UNDERSCORE  &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SINGLE_QUOTE
 &kp KP_PLUS              &kp KP_ASTERISK  &kp LEFT_BRACKET  &kp LC(V)             &kp LC(C)  &kp EQUAL         &kp DELETE      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
 &trans                   &trans           &trans            &trans                &trans     &trans            &trans          &trans                                                              &kp KP_NUMLOCK
@@ -139,7 +139,7 @@
             >;
         };
 
-        layer_6 {
+        BT {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
