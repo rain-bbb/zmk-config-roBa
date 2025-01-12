@@ -61,10 +61,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R  &kp T                                                       &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F  &kp G                 &kp INT2            &lt 1 LANGUAGE_2  &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z      &kp X         &kp C         &kp V  &kp B                 &kp LEFT_SHIFT      &kp DEL           &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &mt LEFT_SHIFT SPACE  &tapdance_kana      &kp BACKSPACE     &lt 3 ENTER                             &kp LS(LG(S))
+&kp Q      &kp W         &kp E         &kp R  &kp T                                                           &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F  &kp G                     &kp INT2            &lt 1 LANGUAGE_2  &kp H        &kp J  &kp K      &kp L    &kp SQT
+&kp Z      &kp X         &kp C         &kp V  &kp B                     &kp LEFT_SHIFT      &kp DEL           &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &mt LEFT_SHIFT LS(SPACE)  &tapdance_kana      &kp BACKSPACE     &lt 3 ENTER                             &kp LS(LG(S))
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -93,7 +93,7 @@
 &kp PLUS   &kp AT_SIGN    &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LS(INTERNATIONAL_3)                                &trans         &trans          &trans          &trans           &trans
 &kp CARET  &kp AMPERSAND  &kp EXCLAMATION    &kp QUESTION   &kp INT_YEN              &trans                &to 4   &kp PAGE_UP    &trans          &kp UP_ARROW    &trans           &trans
 &kp HASH   &kp PERCENT    &kp SINGLE_QUOTE   &kp SEMICOLON  &kp EQUAL                &trans                &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp UNDERSCORE
-&trans     &trans         &trans             &trans         &trans                   &lt 1 LANGUAGE_2      &trans  &trans                                                          &trans
+&trans     &trans         &trans             &trans         &mt LEFT_SHIFT SPACE     &lt 1 LANGUAGE_2      &trans  &trans                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
