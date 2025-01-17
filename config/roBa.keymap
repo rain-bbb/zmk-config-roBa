@@ -36,6 +36,13 @@
             bindings = <&sk LEFT_ALT &mkp LCLK>;
             label = "ALTCLICK";
         };
+
+        hint2: hint2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(G) &kp A &kp L &kp I &kp L &kp E &kp O &kp MINUS &kp N0 &kp N8 &kp N2 &kp N3>;
+            label = "HINT2";
+        };
     };
 
     behaviors {
@@ -74,7 +81,7 @@
 
         FUNCTION {
             bindings = <
-&hint   &trans  &trans  &trans  &trans                         &trans  &kp F7  &kp F8  &kp F9  &kp F12
+&hint   &hint2  &trans  &trans  &trans                         &trans  &kp F7  &kp F8  &kp F9  &kp F12
 &trans  &trans  &trans  &trans  &altclick  &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &trans  &trans  &trans  &trans     &mo 6       &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
 &trans  &trans  &trans  &trans  &trans     &trans      &trans  &trans                          &kp ESCAPE
