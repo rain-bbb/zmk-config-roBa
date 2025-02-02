@@ -30,18 +30,25 @@
             label = "PASS";
         };
 
-        altclick: altclick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_ALT &mkp LCLK>;
-            label = "ALTCLICK";
-        };
-
         hint2: hint2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(G) &kp A &kp L &kp I &kp L &kp E &kp O &kp MINUS &kp N0 &kp N8 &kp N2 &kp N3>;
             label = "HINT2";
+        };
+
+        iPhone: iPhone {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp LS(P) &kp H &kp O &kp N &kp E>;
+            label = "IPHONE";
+        };
+
+        iOS: iOS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp LS(O) &kp LS(S)>;
+            label = "IOS";
         };
     };
 
@@ -70,10 +77,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R  &kp T                                                       &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F  &kp G                 &kp INT2            &lt 1 LANGUAGE_2  &kp H        &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SQT
-&kp Z      &kp X         &kp C         &kp V  &kp B                 &kp LEFT_SHIFT      &kp DEL           &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &mt LEFT_SHIFT SPACE  &tapdance_kana      &kp BACKSPACE     &lt 3 ENTER                             &kp LS(LG(S))
+&kp Q             &kp W         &kp E         &kp R  &kp T                                                       &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F  &kp G                 &kp INT2            &lt 1 LANGUAGE_2  &kp H        &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B                 &kp TAB             &kp DEL           &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &mt LEFT_SHIFT SPACE  &tapdance_kana      &kp BACKSPACE     &lt 3 ENTER                             &kp LS(LG(S))
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -82,8 +89,8 @@
         FUNCTION {
             bindings = <
 &hint   &hint2  &trans  &trans  &kp ESCAPE                      &trans  &kp F7  &kp F8  &kp F9  &kp F12
-&trans  &trans  &trans  &trans  &altclick   &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans  &trans  &trans  &trans      &mo 6       &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
+&trans  &trans  &trans  &trans  &trans      &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &trans  &trans  &iOS    &iPhone     &mo 6       &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
 &trans  &trans  &trans  &trans  &trans      &trans      &trans  &trans                          &kp ESCAPE
             >;
         };
@@ -91,7 +98,7 @@
         NUM {
             bindings = <
 &kp LS(INTERNATIONAL_1)  &kp LEFT_ALT     &kp ASTERISK      &kp LEFT_PARENTHESIS  &mkp MCLK                             &kp TAB          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
-&kp MINUS                &kp UNDERSCORE   &mo 5             &mkp LCLK             &mkp RCLK  &trans         &trans      &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SINGLE_QUOTE
+&kp MINUS                &kp UNDERSCORE   &mo 5             &mkp LCLK             &mkp RCLK  &trans         &trans      &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt RIGHT_SHIFT SINGLE_QUOTE
 &kp KP_PLUS              &kp KP_ASTERISK  &kp LEFT_BRACKET  &kp LC(V)             &kp LC(C)  &kp LC(Z)      &kp DELETE  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
 &trans                   &trans           &trans            &trans                &trans     &trans         &trans      &trans                                                              &kp KP_NUMLOCK
             >;
@@ -99,10 +106,10 @@
 
         ARROW {
             bindings = <
-&kp PLUS   &kp AT_SIGN    &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LS(INTERNATIONAL_3)                                 &trans         &kp LC(KP_PLUS)  &trans          &trans           &trans
-&kp CARET  &kp AMPERSAND  &kp EXCLAMATION    &kp QUESTION   &kp INT_YEN               &trans                &to 4   &kp PAGE_UP    &kp LC(MINUS)    &kp UP_ARROW    &trans           &trans
-&kp HASH   &kp PERCENT    &kp SINGLE_QUOTE   &kp SEMICOLON  &kp EQUAL                 &trans                &trans  &kp PAGE_DOWN  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp UNDERSCORE
-&trans     &trans         &trans             &trans         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &trans  &trans                                                           &trans
+&kp PLUS             &kp AT_SIGN    &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LS(INTERNATIONAL_3)                                 &trans         &kp LC(KP_PLUS)  &trans          &trans           &trans
+&kp CARET            &kp AMPERSAND  &kp EXCLAMATION    &kp QUESTION   &kp INT_YEN               &trans                &to 4   &kp PAGE_UP    &kp LC(MINUS)    &kp UP_ARROW    &trans           &trans
+&mt LEFT_SHIFT HASH  &kp PERCENT    &kp SINGLE_QUOTE   &kp SEMICOLON  &kp EQUAL                 &trans                &trans  &kp PAGE_DOWN  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp UNDERSCORE
+&trans               &trans         &trans             &trans         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &trans  &trans                                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
