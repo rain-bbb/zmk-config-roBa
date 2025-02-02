@@ -106,10 +106,10 @@
 
         ARROW {
             bindings = <
-&kp PLUS             &kp AT_SIGN    &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LS(INTERNATIONAL_3)                                 &trans         &kp LC(KP_PLUS)  &trans          &trans           &trans
-&kp CARET            &kp AMPERSAND  &kp EXCLAMATION    &kp QUESTION   &kp INT_YEN               &trans                &to 4   &kp PAGE_UP    &kp LC(MINUS)    &kp UP_ARROW    &trans           &trans
-&mt LEFT_SHIFT HASH  &kp PERCENT    &kp SINGLE_QUOTE   &kp SEMICOLON  &kp EQUAL                 &trans                &trans  &kp PAGE_DOWN  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp UNDERSCORE
-&trans               &trans         &trans             &trans         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &trans  &trans                                                           &trans
+&kp AMPERSAND        &kp AT_SIGN       &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LS(INTERNATIONAL_3)                                 &trans         &kp LC(KP_PLUS)  &trans          &trans           &kp PLUS
+&kp CARET            &kp LEFT_BRACKET  &kp EXCLAMATION    &kp QUESTION   &kp INT_YEN               &trans                &to 4   &kp PAGE_UP    &kp LC(MINUS)    &kp UP_ARROW    &trans           &trans
+&mt LEFT_SHIFT HASH  &kp PERCENT       &kp SINGLE_QUOTE   &kp SEMICOLON  &kp EQUAL                 &trans                &trans  &kp PAGE_DOWN  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp UNDERSCORE
+&trans               &trans            &trans             &trans         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &trans  &trans                                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
