@@ -76,8 +76,6 @@
             label = "WHEELSCROLL";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
         };
     };
 
@@ -123,7 +121,7 @@
 &trans               &trans            &trans             &trans         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &trans  &trans                                                                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp LC(UP_ARROW) LC(DOWN_ARROW)>;
         };
 
         MOUSE {
