@@ -83,7 +83,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &lt 2 SPACE  &tapdance_kana      &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         FUNCTION {
@@ -102,6 +102,8 @@
 &mt LEFT_SHIFT KP_PLUS   &kp KP_ASTERISK  &kp LEFT_BRACKET  &kp LC(V)             &kp LC(C)  &kp LC(Z)      &kp DELETE  &kp KP_DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_N0
 &trans                   &trans           &trans            &trans                &trans     &trans         &trans      &trans                                                           &kp KP_NUMLOCK
             >;
+
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
         };
 
         ARROW {
@@ -139,6 +141,15 @@
 &trans       &trans        &trans        &trans        &trans  &trans      &sys_reset   &trans        &trans        &trans        &trans        &trans
 &trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &bootloader  &sys_reset    &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
