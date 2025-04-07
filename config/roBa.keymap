@@ -62,15 +62,6 @@
             tapping-term-ms = <200>;
         };
 
-        WheelScroll: WheelScroll {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "WHEELSCROLL";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-
-            tap-ms = <20>;
-        };
-
         tapdance_kana: tapdance_kana {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_KANA";
@@ -92,7 +83,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &lt 2 SPACE  &tapdance_kana      &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
             >;
 
-            sensor-bindings = <&WheelScroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&none>;
         };
 
         FUNCTION {
@@ -114,7 +105,7 @@
 &trans                   &trans           &trans            &trans                &trans     &trans         &trans      &trans                                                           &kp KP_NUMLOCK
             >;
 
-            sensor-bindings = <&WheelScroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&none>;
         };
 
         ARROW {
