@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_MOUSE_SCRL_VAL 20
-
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
@@ -64,22 +63,13 @@
             tapping-term-ms = <200>;
         };
 
-        tapdance_kana: tapdance_kana {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_KANA";
-            #binding-cells = <0>;
-            bindings = <&kp INT2>, <&kp LANGUAGE_2>, <&sl 1>;
-
-            tapping-term-ms = <400>;
-        };
-
         WheelScroll: WheelScroll {
-            compatible = "zmk,behavior-sensor-rotate";
+            compatible = "zmk,behavior-sensor-rotate-var";
             label = "WHEELSCROLL";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_DOWN>;
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
 
-            tap-ms = <30>;
+            tap-ms = <20>;
         };
     };
 
@@ -88,13 +78,13 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R  &kp T                                           &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F  &kp G        &mkp MCLK           &kp TAB        &kp H        &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B        &kp TAB             &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &lt 2 SPACE  &tapdance_kana      &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
+&kp Q             &kp W         &kp E         &kp R  &kp T                                      &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F  &kp G        &mkp MCLK      &kp TAB        &kp H        &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B        &kp TAB        &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &lt 2 SPACE  &none          &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
             >;
 
-            sensor-bindings = <&WheelScroll>;
+            sensor-bindings = <&WheelScroll SCRL_UP SCRL_DOWN>;
         };
 
         FUNCTION {
@@ -104,6 +94,8 @@
 &trans  &trans  &trans  &iOS    &iPhone     &mo 6       &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
 &trans  &trans  &trans  &trans  &trans      &mo 1       &trans  &trans                          &kp ESCAPE
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         NUM {
@@ -114,7 +106,7 @@
 &trans                   &trans           &trans            &trans                &trans     &trans         &trans      &trans                                                           &kp KP_NUMLOCK
             >;
 
-            sensor-bindings = <&WheelScroll>;
+            sensor-bindings = <&WheelScroll SCRL_UP SCRL_DOWN>;
         };
 
         ARROW {
@@ -136,7 +128,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                           &bootloader
             >;
 
-            sensor-bindings = <&WheelScroll>;
+            sensor-bindings = <&none>;
         };
 
         SCROLL {
