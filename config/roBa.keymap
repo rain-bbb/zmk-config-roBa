@@ -70,6 +70,15 @@
 
             tapping-term-ms = <400>;
         };
+
+        WheelScroll: WheelScroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "WHEELSCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_DOWN>;
+
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -103,7 +112,7 @@
 &trans                   &trans           &trans            &trans                &trans     &trans         &trans      &trans                                                           &kp KP_NUMLOCK
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         ARROW {
