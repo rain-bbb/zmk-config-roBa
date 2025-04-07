@@ -70,6 +70,15 @@
 
             tapping-term-ms = <400>;
         };
+
+        WheelScroll: WheelScroll {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "WHEELSCROLL";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -82,6 +91,8 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B        &kp TAB             &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &lt 2 SPACE  &tapdance_kana      &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
             >;
+
+            sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
         };
 
         FUNCTION {
@@ -92,7 +103,7 @@
 &trans  &trans  &trans  &trans  &trans      &mo 1       &trans  &trans                          &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         NUM {
