@@ -76,6 +76,8 @@
             label = "WHEELSCROLL";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_DOWN>;
+
+            tap-ms = <10>;
         };
     };
 
