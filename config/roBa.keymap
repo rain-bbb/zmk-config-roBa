@@ -92,7 +92,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &lt 2 SPACE  &tapdance_kana      &kp BACKSPACE  &lt 3 ENTER                             &kp LS(LG(S))
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&WheelScroll>;
         };
 
         FUNCTION {
@@ -112,7 +112,7 @@
 &trans                   &trans           &trans            &trans                &trans     &trans         &trans      &trans                                                           &kp KP_NUMLOCK
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&WheelScroll>;
         };
 
         ARROW {
@@ -133,6 +133,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &kp LC(LS(TAB))  &kp F5  &kp LC(TAB)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                           &bootloader
             >;
+
+            sensor-bindings = <&WheelScroll>;
         };
 
         SCROLL {
