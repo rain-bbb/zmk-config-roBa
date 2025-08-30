@@ -12,5 +12,9 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: rain-bbb
       revision: main
+    - name: prospector-zmk-module
+      remote: prospector
+      revision: v1.1.1
+      path: modules/prospector-zmk-module
   self:
     path: config
